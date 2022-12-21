@@ -2,7 +2,7 @@
 
 # Part 1
 
-def sum(arr)
+def sum arr
   sum = 0
   arr.each do |i|
     sum = sum + i 
@@ -11,7 +11,7 @@ def sum(arr)
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  puts sum(arr.max(2))
 end
 
 def sum_to_n? arr, n
@@ -41,3 +41,4 @@ end
 sum = 0
 array = [1, 2, 3, 4, 5]
 sum(array)
+max_2_sum(array)
