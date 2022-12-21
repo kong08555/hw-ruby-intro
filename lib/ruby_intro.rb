@@ -2,8 +2,12 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
+def sum(arr)
+  sum = 0
+  arr.each do |i|
+    sum = sum + i 
+  end
+  puts sum
 end
 
 def max_2_sum arr
@@ -33,3 +37,7 @@ end
 class BookInStock
 # YOUR CODE HERE
 end
+
+sum = 0
+array = [1, 2, 3, 4, 5]
+sum(array)
