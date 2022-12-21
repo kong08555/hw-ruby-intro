@@ -15,13 +15,15 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  sum = 0
+  count = 0
+  arr.each{}
 end
 
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
+  puts "hello world: #{name}"
 end
 
 def starts_with_consonant? s
@@ -38,7 +40,8 @@ class BookInStock
 # YOUR CODE HERE
 end
 
-sum = 0
+
 array = [1, 2, 3, 4, 5]
 sum(array)
 max_2_sum(array)
+hello("kong")
