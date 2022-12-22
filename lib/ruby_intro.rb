@@ -7,7 +7,7 @@ def sum arr
   arr.each do |i|
     sum = sum + i 
   end
-  puts sum
+  sum
   return sum
 end
 
@@ -16,9 +16,15 @@ def max_2_sum arr
 end
 
 def sum_to_n? arr, n
-  sum = 0
-  arr.each{ |i|
-  }
+  return false if arr.length == 0  || arr.length == 1
+  arr.each_with_index do |j, indx1|
+    arr.drop(indx1).each_with_index do |k, indx2|
+      return true if(j + k) == n and indx1 != indx2 + indx1
+    end
+  end
+  return false
+
+
 end
 
 # Part 2
@@ -34,11 +40,9 @@ end
 
 def binary_multiple_of_4? s
   if s[-1] == 0 and s[-2] == 0
-   puts true
-   return true
+    return true
   else
-   puts false
-   return false
+    return false
   end
 end
 
@@ -57,17 +61,18 @@ class BookInStock
     "name:#{@name_B},#{@price}"
   end
 
+
 end
 
 
 array = [1, 2, 3, 4, 5, 6]
-sum(array)
-max_2_sum(array)
-sum_to_n?((array), 7)
+puts sum(array)
+puts max_2_sum(array)
+puts sum_to_n?((array),7)
 
 hello("kong")
 puts starts_with_consonant?("o")
-binary_multiple_of_4?(1001001011011001)
+puts binary_multiple_of_4?(1001001011011001)
 
 Book = BookInStock.new("cafe terria :", 145) 
 puts Book.print_Class
