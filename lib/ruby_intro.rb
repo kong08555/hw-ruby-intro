@@ -8,40 +8,66 @@ def sum arr
     sum = sum + i 
   end
   puts sum
+  return sum
 end
 
 def max_2_sum arr
-  puts sum(arr.max(2))
+  return sum(arr.max(2))
 end
 
 def sum_to_n? arr, n
   sum = 0
-  count = 0
-  arr.each{}
+  arr.each{ |i|
+  }
 end
 
 # Part 2
 
 def hello(name)
-  puts "hello world: #{name}"
+  puts "hello:#{name}"
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  s = s.to_s.downcase
+  return s == "" ? true : s[0].match?(/a|e|i|o|u/)
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if s[-1] == 0 and s[-2] == 0
+   puts true
+   return true
+  else
+   puts false
+   return false
+  end
 end
 
 # Part 3
 
 class BookInStock
-# YOUR CODE HERE
+  attr_reader :name_B
+  attr_accessor :price
+
+  def initialize(name_B, price)
+    @name_B = name_B
+    @price = price
+  end
+
+  def print_Class
+    "name:#{@name_B},#{@price}"
+  end
+
 end
 
 
-array = [1, 2, 3, 4, 5]
+array = [1, 2, 3, 4, 5, 6]
 sum(array)
 max_2_sum(array)
+sum_to_n?((array), 7)
+
 hello("kong")
+puts starts_with_consonant?("o")
+binary_multiple_of_4?(1001001011011001)
+
+Book = BookInStock.new("cafe terria :", 145) 
+puts Book.print_Class
