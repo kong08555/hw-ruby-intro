@@ -68,11 +68,13 @@ end
 array = [1, 2, 3, 4, 5, 6]
 puts sum(array)
 puts max_2_sum(array)
-puts sum_to_n?((array),7)
+puts sum_to_n?((array),15)
+puts "--------------------------------------------------------------"
 
 hello("kong")
 puts starts_with_consonant?("o")
 puts binary_multiple_of_4?(1001001011011001)
+puts "--------------------------------------------------------------"
 
 Book = BookInStock.new("cafe terria :", 145) 
 puts Book.print_Class
