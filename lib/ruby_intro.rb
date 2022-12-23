@@ -7,7 +7,6 @@ def sum arr
   arr.each do |i|
     sum = sum + i 
   end
-  sum
   return sum
 end
 
